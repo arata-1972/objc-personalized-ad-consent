@@ -1,2 +1,2 @@
-# objc-personalized-ad-consent
+# PersonalizedAdConsentSample
 Sample to display consent form corresponding to GDPR.
