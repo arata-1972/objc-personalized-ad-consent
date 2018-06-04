@@ -16,7 +16,7 @@ AdMobの管理画面にログインし、「ブロックの管理」→「EU ユ
 
 ### 2. CocoaPodsから SDKをインストール
 
-_Podfile_に「_pod 'PersonalizedAdConsent'_」の一行を追加し、SDKをインストールします。
+_Podfile_ に「_pod 'PersonalizedAdConsent'_」の一行を追加し、SDKをインストールします。
 
 ## 実装
 
