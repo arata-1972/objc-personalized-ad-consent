@@ -1,12 +1,12 @@
-# PersonalizedAdConsentSample
+# GDPRに対応した同意フォームを表示するサンプル（iOS）
 
 AdMobを使用した iOSアプリで GDPRに対応した同意フォームを表示するサンプルです。
 
 主に[公式ドキュメント](https://developers.google.com/admob/ios/eu-consent "公式ドキュメント")の情報を参考にしています。
 
-##導入準備
+## 導入準備
 
-###1. 広告技術プロバイダの選択
+### 1. 広告技術プロバイダの選択
 
 AdMobの管理画面にログインし、「ブロックの管理」→「EU ユーザーの同意」画面を開きます。
 
@@ -14,17 +14,17 @@ AdMobの管理画面にログインし、「ブロックの管理」→「EU ユ
 
 また、『同意取得の設定』にある『サイト運営者 ID』も後に使用するので控えておきます。
 
-###2. CocoaPodsから SDKをインストール
+### 2. CocoaPodsから SDKをインストール
 
 _Podfile_に「_pod 'PersonalizedAdConsent'_」の一行を追加し、SDKをインストールします。
 
-##実装
+## 実装
 
-###同意フォームの表示
+### 同意フォームの表示
 
 EU圏内であれば同意フォームを表示し、従来通りのパーソナライズされた広告を表示するか、非パーソナライズされた広告を表示するかの設定を保持し、その設定によって広告のリクエストを分岐します。
 
-####ViewController.h
+#### ViewController.h
 
 ```objective-c
 #import <UIKit/UIKit.h>
@@ -36,7 +36,7 @@ EU圏内であれば同意フォームを表示し、従来通りのパーソナ
 @end
 ```
 
-####ViewController.m
+#### ViewController.m
 
 ```objective-c
 #import "ViewController.h"
@@ -182,11 +182,11 @@ BOOL      const PAC_DEBUG_MODE     = YES; // デバッグモード
 @end
 ```
 
-###広告のパーソナライズ設定の保持
+### 広告のパーソナライズ設定の保持
 
 広告のパーソナライズ設定をユーザーデフォルトに保持します。
 
-####Common.h
+#### Common.h
 
 ```objective-c
 #import <UIKit/UIKit.h>
@@ -212,7 +212,7 @@ BOOL      const PAC_DEBUG_MODE     = YES; // デバッグモード
 @end
 ```
 
-####Common.m
+#### Common.m
 
 ```objective-c
 #import "Common.h"
@@ -270,7 +270,7 @@ static Common *_sharedInstance = nil;
 @end
 ```
 
-###非パーソナライズ広告のリクエスト
+### 非パーソナライズ広告のリクエスト
 
 非パーソナライズ広告を表示する場合は、下記のように広告のリクエスト時にパラメータを渡します。
 
