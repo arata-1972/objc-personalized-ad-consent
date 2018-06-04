@@ -90,7 +90,7 @@ BOOL      const PAC_DEBUG_MODE     = YES; // デバッグモード
      completionHandler:^(NSError *_Nullable error) {
          if (error) {
              // エラー
-             NSLog(@"Error -> requestConsentInfoUpdate: %@", error)
+             NSLog(@"Error -> requestConsentInfoUpdate: %@", error);
          } else {
              if ([PACConsentInformation sharedInstance].isRequestLocationInEEAOrUnknown) {
                  // EU圏内もしくは不明であればステータスをチェックする
